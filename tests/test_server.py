@@ -32,4 +32,4 @@ def test_unauthenticated_request(remote_server: RemoteServer):
         "/close",
     ]:
         response = requests.get(f"http://127.0.0.1:{remote_server.port}/{endpoint}")
-        assert response.status_code == 403
+        assert response.status_code == 401
